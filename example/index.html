@@ -1,0 +1,20 @@
+{{#extend "layout"}}
+  {{#append "head"}}
+  <link rel="stylesheet" href="/example/public/styles/home.css" />
+  {{/append}}
+
+  {{#append "scripts"}}
+  <script src="/example/public/scripts/home.js"></script>
+  {{/append}}
+
+  {{#append "header"}}
+  {{/append}}
+
+  {{#replace "body"}}
+  <h3>Example Home</h3>
+  <p>This is console-template example.</p>
+  {{/replace}}
+
+  {{#prepend "footer"}}
+  {{/prepend}}
+{{/extend}}

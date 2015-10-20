@@ -1,0 +1,54 @@
+$topbar-height: 50px;
+
+.viewFramework{
+  &-topbar {
+    position: fixed;
+    width: 100%;
+    height: $topbar-height;
+    background: #09C;
+    z-index: 101
+  }
+
+  &-body {
+    position: absolute;
+    width: 100%;
+    top: $topbar-height;
+    bottom: 0px;
+    background-color: #000;
+    z-index: 100
+  }
+
+  &-sidebar {
+    //width: 0px;
+    //display: none;
+    position: fixed;
+    top: $topbar-height;
+    bottom: 0px;
+    background-color: #293038;
+    z-index: 102;
+    overflow-x: hidden;
+  }
+
+  &-product {
+    width: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden;
+    background: #FFF;
+
+    &-body{
+      position: absolute;
+      width: auto;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      overflow: hidden;
+      overflow-y: auto;
+      @include transition(all 0.2s ease);
+    }
+  }
+}

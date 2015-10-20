@@ -1,0 +1,158 @@
+$topbar-btn-color: #fff;
+$topbar-btn-bg: #09c;
+$topbar-btn-hover-color: #09c;
+$topbar-btn-hover-bg: #fff;
+
+$topbar-nav-link-color: $topbar-btn-color;
+$topbar-nav-link-hover-bg: $topbar-btn-hover-bg;
+
+.fill-vertical{
+  height: 100%;
+}
+
+.console-topbar{
+  font-size: 14px;
+
+  a{
+    text-decoration: none;
+  }
+
+  .topbar-wrap{
+    //extends fill-vertical
+  }
+
+  .topbar-clearfix{
+    @include clearfix;//bootstrap's
+  }
+
+  .topbar-left{
+    float: left;
+  }
+
+  .topbar-right{
+    float: right;
+  }
+
+  .topbar-btn{
+    line-height: $topbar-height;
+    color: $topbar-btn-color;
+    background-color: $topbar-btn-bg;
+    display: inline-block;
+
+    &:hover{
+      //color: $topbar-btn-hover-color;
+      background-color: darken($topbar-btn-bg, 5%);
+    }
+  }
+  // Open dropdowns
+  .open{
+    > a,
+    .topbar-btn{
+      &,
+      &:hover,
+      &:focus {
+        background-color: $topbar-nav-link-hover-bg;
+        border-color: $topbar-nav-link-hover-bg;
+        color: $link-color;
+      }
+    }
+
+  }
+
+  .topbar-head{
+    height: $topbar-height;
+
+    .topbar-btn{
+      padding: 0 20px;
+    }
+  }
+
+  .topbar-nav{
+    position: relative;
+
+    .topbar-btn{
+      padding: 0 20px;
+    }
+  }
+
+  .topbar-info{
+    height: $topbar-height;
+
+    .topbar-btn{
+      padding: 0 10px;
+    }
+
+    .topbar-info-item{
+      display: inline-block;
+    }
+  }
+
+
+  //不用自定义的头部结构，用bootstrap原生的“nav”实现，需要做如下调整
+  .nav {
+    margin-bottom: 0;
+    padding-left: 0; // Override default ul/ol
+    list-style: none;
+    @include clearfix;
+
+    @extend .fill-vertical;
+
+    > li {
+      position: relative;
+      display: block;
+
+      > a {
+        position: relative;
+        display: block;
+        //padding: $nav-link-padding;
+        color: $topbar-nav-link-color;
+        &:hover,
+        &:focus {
+          color: $link-color;
+          text-decoration: none;
+          background-color: darken($topbar-btn-bg, 10%);
+        }
+      }
+
+      // Disabled state sets text to gray and nukes hover/tab effects
+      &.disabled > a {
+        color: $nav-disabled-link-color;
+
+        &:hover,
+        &:focus {
+          color: $nav-disabled-link-hover-color;
+          text-decoration: none;
+          background-color: transparent;
+          cursor: $cursor-disabled;
+        }
+      }
+    }
+
+    // Open dropdowns
+    .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $topbar-nav-link-hover-bg;
+        border-color: $topbar-nav-link-hover-bg;
+        color: $link-color;
+      }
+    }
+
+    // Nav dividers (deprecated with v3.0.1)
+    //
+    // This should have been removed in v3 with the dropping of `.nav-list`, but
+    // we missed it. We don't currently support this anywhere, but in the interest
+    // of maintaining backward compatibility in case you use it, it's deprecated.
+    .nav-divider {
+      @include nav-divider;
+    }
+
+    // Prevent IE8 from misplacing imgs
+    //
+    // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
+    > li > a > img {
+      max-width: none;
+    }
+  }
+}

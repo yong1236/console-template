@@ -1,0 +1,32 @@
+{{#extend "layout"}}
+  {{#append "head"}}
+  <link rel="stylesheet" href="/example/buttons/buttons.css" />
+  {{/append}}
+
+  {{#append "scripts"}}
+  <script src="/example/buttons/buttons.js"></script>
+  {{/append}}
+
+  {{#append "header"}}
+  {{/append}}
+
+  {{#replace "body"}}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <button class="btn">Null</button>
+        <button class="btn btn-default">Default</button>
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-info">Info</button>
+        <button class="btn btn-warning">Warning</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-error">Error</button>
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+  </div>
+  {{/replace}}
+
+  {{#prepend "footer"}}
+  {{/prepend}}
+{{/extend}}
