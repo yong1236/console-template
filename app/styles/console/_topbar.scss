@@ -59,6 +59,10 @@ $topbar-nav-link-hover-bg: $topbar-btn-hover-bg;
 
   }
 
+  .badge{
+    background-color: $label-warning-bg;
+  }
+
   .topbar-head{
     height: $topbar-height;
 
