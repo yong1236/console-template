@@ -1,117 +1,86 @@
 $sidebar-full-width: 180px;
 $sidebar-mini-width: 50px;
 
-.viewFramework-sidebar-full{
-  .sidebar-content {
-    width: $sidebar-full-width+20px;
-  }
-
-  .viewFramework-sidebar,
-  .sidebar-fold,
-  .sidebar-nav{
-    width: $sidebar-full-width;
-  }
-
-  .viewFramework-product {
-    left: $sidebar-full-width;
-  }
-}
-
-.viewFramework-sidebar-mini{
-  .sidebar-content {
-    width: $sidebar-mini-width+20px;
-  }
-
-  .viewFramework-sidebar,
-  .sidebar-fold,.sidebar-unfold,
-  .sidebar-nav{
-    width: $sidebar-mini-width;
-
-    .nav-title,
-    .sidebar-title-text,
-    .sidebar-manage{
-      display: none;
-    }
-  }
-
-  .viewFramework-product {
-    left: $sidebar-mini-width;
-  }
-}
-
-
-.viewFramework{
-  &-sidebar {
+.viewFramework-sidebar {
+  &-full {
     .sidebar-content {
-      //width: 200px;
-      height: 100%;
-      overflow: auto;
-      overflow-x: hidden
+      width: $sidebar-full-width+20px;
     }
 
-    .sidebar-fold{
-      height: 30px;
-      background: #394555;
-      color: #aeb9c2;
-      text-align: center;
-      line-height: 30px !important;
-      font-size: 12px;
-      user-select: none;
-      cursor: pointer;
-      -webkit-user-select: none;
-    }
-
+    .viewFramework-sidebar,
+    .sidebar-fold,
     .sidebar-nav {
+      width: $sidebar-full-width;
+    }
 
-      ul {
-        margin: 0px;
-        padding: 0px;
-        list-style: none;
-        overflow: hidden;
+    .viewFramework-product {
+      left: $sidebar-full-width;
+    }
+  }
+
+  &-mini {
+    .sidebar-content {
+      width: $sidebar-mini-width+20px;
+    }
+
+    .viewFramework-sidebar,
+    .sidebar-fold, .sidebar-unfold,
+    .sidebar-nav {
+      width: $sidebar-mini-width;
+
+      .nav-title,
+      .sidebar-title-text,
+      .sidebar-manage {
+        display: none;
       }
+    }
 
-      li {
+    .viewFramework-product {
+      left: $sidebar-mini-width;
+    }
+  }
+
+  .sidebar-content {
+    //width: 200px;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden
+  }
+
+  .sidebar-fold {
+    height: 30px;
+    background: #394555;
+    color: #aeb9c2;
+    text-align: center;
+    line-height: 30px !important;
+    font-size: 12px;
+    user-select: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+  }
+
+  .sidebar-nav {
+
+    ul {
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+      overflow: hidden;
+    }
+
+    li {
+      display: block;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      overflow: hidden;
+
+      a {
         display: block;
         width: 100%;
         height: 40px;
         line-height: 40px;
         overflow: hidden;
-
-        a {
-          display: block;
-          width: 100%;
-          height: 40px;
-          line-height: 40px;
-          overflow: hidden;
-
-          &:hover {
-            background: #37424f;
-            .nav-icon {
-              color: #fff;
-            }
-            .nav-title {
-              color: #fff;
-            }
-          }
-        }
-
-        &.active a {
-          background: #0099cc;
-
-          .nav-icon {
-            color: #fff;
-          }
-        }
-      }
-
-      .sidebar-title {
-        height: 40px;
-        background: #22282e;
-        color: #fff;
-        line-height: 40px;
-        position: relative;
-        cursor: pointer;
-        -webkit-user-select: none;
 
         &:hover {
           background: #37424f;
@@ -123,62 +92,90 @@ $sidebar-mini-width: 50px;
           }
         }
       }
-      .sidebar-title-icon {
-        display: inline-block;
-        margin: 0 8px 0 20px;
-        vertical-align: middle;
-        transition: transform 0.12s;
-        -o-transition: -o-transform 0.12s;
-        -ms-transition: -ms-transform 0.12s;
-        -moz-transition: -moz-transform 0.12s;
-        -webkit-transition: -webkit-transform 0.12s;
-      }
-      .sidebar-manage{
-        vertical-align: middle;
-        position: absolute;
-        height: 40px;
-        width: 40px;
-        right: 0;
 
-        > a{
-          display: block;
-          width: 100%;
-          height: 100%;
-          line-height: 40px;
-          text-align: center;
-          color: #a0abb3;
-          text-decoration: none;
+      &.active a {
+        background: #0099cc;
+
+        .nav-icon {
+          color: #fff;
         }
-      }
-
-      .nav-item {
-        position: relative;
-      }
-
-      .nav-icon {
-        width: 50px;
-        height: 40px;
-        text-align: center;
-        font-size: 16px;
-        float: left;
-        color: #aeb9c2;
-      }
-
-      .nav-title {
-        float: left;
-        overflow: hidden;
-        color: #fff;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        display: block;
-        width: 130px;
       }
     }
 
-    .sidebar-nav-fold {
-      .sidebar-title-icon{
-        @include rotate(-90deg);
+    .sidebar-title {
+      height: 40px;
+      background: #22282e;
+      color: #fff;
+      line-height: 40px;
+      position: relative;
+      cursor: pointer;
+      -webkit-user-select: none;
+
+      &:hover {
+        background: #37424f;
+        .nav-icon {
+          color: #fff;
+        }
+        .nav-title {
+          color: #fff;
+        }
       }
+    }
+    .sidebar-title-icon {
+      display: inline-block;
+      margin: 0 8px 0 20px;
+      vertical-align: middle;
+      transition: transform 0.12s;
+      -o-transition: -o-transform 0.12s;
+      -ms-transition: -ms-transform 0.12s;
+      -moz-transition: -moz-transform 0.12s;
+      -webkit-transition: -webkit-transform 0.12s;
+    }
+    .sidebar-manage {
+      vertical-align: middle;
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      right: 0;
+
+      > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 40px;
+        text-align: center;
+        color: #a0abb3;
+        text-decoration: none;
+      }
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-icon {
+      width: 50px;
+      height: 40px;
+      text-align: center;
+      font-size: 16px;
+      float: left;
+      color: #aeb9c2;
+    }
+
+    .nav-title {
+      float: left;
+      overflow: hidden;
+      color: #fff;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: block;
+      width: 130px;
+    }
+  }
+
+  .sidebar-nav-fold {
+    .sidebar-title-icon {
+      @include rotate(-90deg);
     }
   }
 }

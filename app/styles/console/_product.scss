@@ -1,53 +1,55 @@
-$defaul-margin-x: 8px;
-$defaul-margin-y: 8px;
+$product-navbar-width: 180px;
 
-.margin-row{
-  margin-top: $defaul-margin-y;
-  margin-bottom: $defaul-margin-y;
-}
-.margin-col{
-  margin-left: $defaul-margin-x;
-  margin-right: $defaul-margin-x;
-}
-.margin-row2{
-  margin-top: $defaul-margin-y * 2;
-  margin-bottom: $defaul-margin-y * 2;
-}
-.margin-col2{
-  margin-left: $defaul-margin-x * 2;
-  margin-right: $defaul-margin-x * 2;
-}
+.viewFramework-product{
+  //product-navbar
+  &-navbar{
+    width: 0px;
+    float: left;
+    background-color: #EAEDF1;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    z-index: 2;
+    overflow: hidden;
+    @include transition(all 0.2s ease);
 
-.margin-row3{
-  margin-top: $defaul-margin-y * 2;
-  margin-bottom: $defaul-margin-y * 2;
-}
-.margin-col3{
-  margin-left: $defaul-margin-x * 2;
-  margin-right: $defaul-margin-x * 2;
-}
-
-.console-title{
-  /*h1{
-    @extend .margin-row3;
+    &-collapse{
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 20px;
+      height: 50px;
+      z-index: 3;
+      @include transition(all 0.2s ease);
+    }
   }
 
-  h2{
-    @extend .margin-row2;
+  //product-body
+  &-body{
+    position: absolute;
+    width: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    overflow-y: auto;
+    @include transition(all 0.2s ease);
   }
-
-  h3, h4, h5, h6{
-    @extend .margin-row;
-  }*/
-
-  h1, h2, h3, h4, h5, h6{
-    display: inline-block;
-    text-indent: 8px;
-    border-left: 2px solid #88B7E0;
-    //margin-top: 0;
-    //margin-bottom: 0;
-    margin-right: 8px;
-  }
-
-
 }
+
+.viewFramework-product-col-1 {
+  .viewFramework-product-navbar-bg,
+  .viewFramework-product-navbar {
+    width: 180px;
+  }
+
+  .viewFramework-product-navbar-collapse {
+    left: 160px;
+  }
+
+  .viewFramework-product-body {
+    left: 180px;
+  }
+}
+
