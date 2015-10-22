@@ -1,3 +1,9 @@
+/**
+ *
+ * TODO: 这个文件里边的内容和整体框架（framework）关系并不大，之后是否考虑重构和整理
+ * 或者在主文件中引入时，不应该和framework文件放在一起
+ */
+
 $topbar-btn-color: #fff;
 $topbar-btn-bg: #09c;
 $topbar-btn-hover-color: #09c;
@@ -57,6 +63,10 @@ $topbar-nav-link-hover-bg: $topbar-btn-hover-bg;
       }
     }
 
+  }
+
+  .badge{
+    background-color: $label-warning-bg;
   }
 
   .topbar-head{

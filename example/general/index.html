@@ -11,14 +11,70 @@
   {{/append}}
 
   {{#replace "body"}}
-  <div class="container">
+  <div class="console-container">
     <div class="row">
-      <div class="col-md-6">
-        <div class="block-flat">
-          <div class="header console-title">
-            <h3>Theme Alert</h3>
+      <div class="col-sm-12">
+        <div class="console-global-notice">
+          <div class="console-global-notice-list">
+            <!-- TODO: 由通知模块实时填充 -->
+            <!-- 单个通知的样式模板暂时还没有采集到，留后补充 -->
           </div>
-          <div class="content">
+          <div class="console-title clearfix">
+            <div class="pull-left">
+              <h4>按钮和按钮组</h4>
+            </div>
+            <div class="pull-right">
+              <div class="btn btn-default">
+                <i class="glyphicon glyphicon-refresh"></i>
+                回到旧版
+              </div>
+              <div class="btn btn-default">
+                <i class="glyphicon glyphicon-refresh"></i>
+                刷新
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#">ECS</a></li>
+          <li><a href="#">RDS</a></li>
+          <li><a href="#">LB</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-12"><div class="console-title clearfix col-sm-6"><div class="row col-sm-12"><h5 class="ng-binding">站点监控</h5></div><div class="row col-sm-11 count_item" style="width: 96.5%"><div class="col-1-5 count_item_unit"><div class="text-center unit-title" title="监控点总数"><nobr class="ng-binding">监控点总数</nobr></div><div class="text-center text-size-24"><a ui-sref="sites" aliyun-console-spm="" spm-id="401" class="ng-binding" href="#/sites/" data-spm-click="gostr=/aliyun;locaid=d401;;" data-spm-anchor-id="5176.2020520111.102.7">0</a></div></div><div class="col-1-5 count_item_unit"><div class="text-center unit-title" title="报警规则"><nobr class="ng-binding">报警规则</nobr></div><div class="text-center text-size-24 unlink"><a ui-sref="sitesalarms({state:''})" aliyun-console-spm="" spm-id="402" class="ng-binding" href="#/sitesalarms/state=" data-spm-click="gostr=/aliyun;locaid=d402;;" data-spm-anchor-id="5176.2020520111.102.8">0</a></div></div><div class="col-1-5 count_item_unit"><div class="text-center unit-title" title="报警"><nobr class="ng-binding">报警</nobr></div><div class="text-center text-size-24 unlink"><a ui-sref="sitesalarms({state:'ALARM'})" aliyun-console-spm="" spm-id="403" class="ng-binding" href="#/sitesalarms/state=ALARM" data-spm-click="gostr=/aliyun;locaid=d403;;" data-spm-anchor-id="5176.2020520111.102.9">0</a></div></div><div class="col-1-5 count_item_unit"><div class="text-center unit-title" title="数据不足"><nobr class="ng-binding">数据不足</nobr></div><div class="text-center text-size-24 unlink"><a ui-sref="sitesalarms({state:'INSUFFICIENT_DATA'})" aliyun-console-spm="" spm-id="404" class="ng-binding" href="#/sitesalarms/state=INSUFFICIENT_DATA" data-spm-click="gostr=/aliyun;locaid=d404;;" data-spm-anchor-id="5176.2020520111.102.10">0</a></div></div><div class="col-1-5 count_item_unit count_item_unit_none"><div class="text-center unit-title" title="暂停"><nobr class="ng-binding">暂停</nobr></div><div class="text-center text-size-24 unlink ng-binding">0</div></div></div></div><div class="console-title clearfix col-sm-6"><div class="row col-sm-12"><h5 class="ng-binding">自定义监控</h5></div><div class="row col-sm-11 count_item" style="width: 96.5%"><div class="col-1-5 count_item_unit"><div class="text-center unit-title" title="监控项总数"><nobr class="ng-binding">监控项总数</nobr></div><div class="text-center text-size-24"><a ui-sref="custom" aliyun-console-spm="" spm-id="501" class="ng-binding" href="#/custom" data-spm-click="gostr=/aliyun;locaid=d501;;" data-spm-anchor-id="5176.2020520111.102.11">0</a></div></div><div class="col-1-5 count_item_unit"><div class="text-center unit-title" title="报警规则"><nobr class="ng-binding">报警规则</nobr></div><div class="text-center text-size-24 unlink"><a ui-sref="customalarms({state:''})" aliyun-console-spm="" spm-id="502" class="ng-binding" href="#/customalarms/state=" data-spm-click="gostr=/aliyun;locaid=d502;;" data-spm-anchor-id="5176.2020520111.102.12">0</a></div></div><div class="col-1-5 count_item_unit"><div class="text-center unit-title" title="报警"><nobr class="ng-binding">报警</nobr></div><div class="text-center text-size-24 unlink"><a ui-sref="customalarms({state:'ALARM'})" aliyun-console-spm="" spm-id="503" class="ng-binding" href="#/customalarms/state=ALARM" data-spm-click="gostr=/aliyun;locaid=d503;;" data-spm-anchor-id="5176.2020520111.102.13">0</a></div></div><div class="col-1-5 count_item_unit"><div class="text-center unit-title" title="数据不足"><nobr class="ng-binding">数据不足</nobr></div><div class="text-center text-size-24 unlink"><a ui-sref="customalarms({state:'INSUFFICIENT_DATA'})" aliyun-console-spm="" spm-id="504" class="ng-binding" href="#/customalarms/state=INSUFFICIENT_DATA" data-spm-click="gostr=/aliyun;locaid=d504;;" data-spm-anchor-id="5176.2020520111.102.14">0</a></div></div><div class="col-1-5 count_item_unit count_item_unit_none"><div class="text-center unit-title" title="暂停"><nobr class="ng-binding">暂停</nobr></div><div class="text-center text-size-24 unlink ng-binding">0</div></div></div></div></div>
+      <div class="col-sm-12">
+        <div class="ng-binding" style="background: #f9f9f9; height: 35px;line-height: 35px;padding-left: 8px">本月短信限额<span class="ng-binding">1000</span>条，已用<span id="used" class="ng-binding">0</span>条，剩余<span class="ng-binding">1000</span>条。</div>
+      </div>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-6">
+            <button class="btn">Null</button>
+            <button class="btn btn-default">Default</button>
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-info">Info</button>
+            <button class="btn btn-warning">Warning</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-error">Error</button>
+          </div>
+          <div class="col-sm-6">
+            <label class="label">Null</label>
+            <label class="label label-default">Default</label>
+            <label class="label label-primary">Primary</label>
+            <label class="label label-info">Info</label>
+            <label class="label label-warning">Warning</label>
+            <label class="label label-success">Success</label>
+            <label class="label label-error">Error</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="block-flat">
+          <div class="console-title">
+            <h5>Theme Alert</h5>
+          <!--</div>
+          <div class="content">-->
             <div class="alert alert-success">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
               <i class="fa fa-check sign"></i><strong>Success!</strong> Changes has been saved successfully!
@@ -37,9 +93,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6">
-
       </div>
     </div>
   </div>
