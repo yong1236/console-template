@@ -9,8 +9,5 @@ $fa-font-path: "../bower_components/font-awesome/fonts/";
 @import "../bower_components/font-awesome/scss/font-awesome";
 
 // override bootstrap
-@import "bootstrap";
-@import "console";
-
-
-
+@import "bootstrap/bootstrap";
+@import "console/console";
