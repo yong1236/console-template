@@ -473,9 +473,9 @@ module.exports = function (grunt) {
     'uglify',
     'copy:dist',
     'modernizr',
-    'filerev',
+    //'filerev',
     'usemin',
-    'htmlmin'
+    //'htmlmin'
   ]);
 
   grunt.registerTask('default', [
