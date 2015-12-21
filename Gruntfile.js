@@ -364,10 +364,16 @@ module.exports = function (grunt) {
         }, {
           expand: true,
           dot: true,
+          cwd: '.',
+          src: 'bower_components/font-awesome/fonts/*',
+          dest: '<%= config.dist %>'
+        }, {
+          expand: true,
+          dot: true,
           cwd: '<%= config.example %>',
           dest: '<%= config.dist %>/<%= config.example %>',
           src: [
-            '*.{ico,png,txt,js,css}'
+            '{,*/}*.{ico,png,txt,js,css}'
             //'images/{,*/}*.webp',
             //'{,*/}*.html',
             //'styles/fonts/{,*/}*.*'
@@ -495,13 +501,12 @@ module.exports = function (grunt) {
     'concat',
     'cssmin',
     'uglify',
-    'handlebarslayouts',
     'copy:dist',
     'modernizr',
     //'filerev',
     'usemin',
     //'htmlmin'
-
+    'handlebarslayouts',
   ]);
 
   grunt.registerTask('default', [
