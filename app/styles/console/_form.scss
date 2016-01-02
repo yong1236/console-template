@@ -12,7 +12,7 @@ $font-size-help-inline: 13px;
 
 $input-hover-border: $input-border-focus;//lighten(greyscale($input-border-focus),10%)
 $input-color-focus: $input-color;
-$input-background-focus: $input-color;
+$input-background-focus: #fff;//$input-color;
 $input-disabled-color:#848484;
 $input-disabled-bg:#EEE;
 
