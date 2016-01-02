@@ -539,3 +539,13 @@ input.input-lg {
   }
 }
 
+input{
+  &.error{
+    border-color: $error-state-color;
+  }
+}
+label.error{
+  line-height: 30px;
+  vertical-align: middle;
+  color: $error-state-color;
+}
