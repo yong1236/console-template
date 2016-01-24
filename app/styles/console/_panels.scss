@@ -1,0 +1,152 @@
+.panel{
+  &-heading{
+
+    &-small{
+      min-height: 12px;
+      padding: 8px;
+      padding-left: 12px;
+
+      .panel-title{
+        line-height: 12px;
+        font-size: 12px;
+      }
+
+      .panel-menu{
+        line-height: 12px;
+      }
+    }
+
+    &-large{
+      min-height: 29px;
+      padding-left: 18px;
+
+      .panel-title{
+        line-height: 28px;
+        font-size: 18px;
+      }
+
+      .panel-menu{
+        line-height: 28px;
+      }
+    }
+  }
+
+  &-title{
+    display: inline;
+  }
+
+  &-toolbar{
+    float: right;
+
+    a{
+      text-decoration: none;
+    }
+
+    .panel-menu {
+      display: inline-block;
+      position: relative;
+    }
+
+    [data-action="close"]{
+      color: #E09E96;
+    }
+
+    [data-action="full-screen"]{
+      color: #feb902;
+    }
+
+    [data-action="reload"],[data-action="refresh"]{
+      color: #7CA362;
+    }
+
+    [data-action="collapse"]{
+      color: #999999;
+    }
+  }
+
+  &.collapsed{
+    .panel-body{
+      display: none;
+    }
+  }
+}
+
+.full-screen{
+  position: fixed;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFF;
+  border-width: 3px;
+  z-index: 1040 !important;
+}
+
+.no-padding{
+  padding: 0;
+}
+
+.no-margin{
+  margin: 0;
+}
+
+.panel-heading .badge {
+  color: #ffffff !important;
+
+  &.badge-default {
+    background-color: $label-default-bg !important;
+  }
+
+  &.badge-primary {
+    background-color: $label-primary-bg !important;
+  }
+
+  &.badge-success {
+    background-color: $label-success-bg !important;
+  }
+
+  &.badge-info {
+    background-color: $label-info-bg !important;
+  }
+
+  &.badge-warning {
+    background-color: $label-warning-bg !important;
+  }
+
+  &.badge-danger {
+    background-color: $label-danger-bg !important;
+  }
+}
+
+$panel-dark-border: #666666;
+$panel-dark-text: #ffffff;
+$panel-dark-heading-bg: #404040;
+
+.panel-dark {
+  @include panel-variant($panel-dark-border, $panel-dark-text, $panel-dark-heading-bg, $panel-dark-border);
+}
+
+.panel-toolbox{
+  background-color: #EEEEEE;
+
+  &-top{
+    padding: 2px;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  &-left{
+    padding: 2px;
+    border-right: 1px solid #cccccc;
+  }
+
+  &-right{
+    padding: 2px;
+    border-left: 1px solid #cccccc;
+  }
+
+  &-bottom{
+    padding: 2px;
+    border-top: 1px solid #cccccc;
+  }
+}

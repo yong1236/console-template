@@ -30,6 +30,22 @@ function getQueryString(name, url) {
   /*w.setActiveMenu = function(x, y){
    $(".sidebar-nav")[x-1].find(".sidebar-trans .nav-item")[y-1].addClass("active");
    }*/
+
+  /**
+   * Panel default toolbar btn actions
+   */
+  $(".panel .panel-toolbar a[data-action='close']").click(function(){
+    $(this).parents(".panel").hide();
+  });
+
+  $(".panel .panel-toolbar a[data-action='collapse']").click(function(){
+    $(this).parents(".panel").toggleClass("collapsed");
+  });
+
+  $(".panel .panel-toolbar a[data-action='full-screen']").click(function(){
+    $(this).parents(".panel").toggleClass("full-screen");
+  });
+
 }(window, jQuery);
 
 function setActiveMenu(x, y){

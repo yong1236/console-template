@@ -1,0 +1,155 @@
+{{#extend "layout"}}
+  {{#append "head"}}
+  <link rel="stylesheet" href="/example/public/styles/home.css" />
+  <link rel="stylesheet" href="/example/panels/panels.css" />
+  {{/append}}
+
+  {{#append "scripts"}}
+  <script src="/example/panels/panels.js"></script>
+  {{/append}}
+
+  {{#append "header"}}
+  {{/append}}
+
+  {{#replace "body"}}
+  <div class="console-container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="console-title clearfix">
+          <div class="pull-left">
+            <h5>面板</h5>
+          </div>
+          <div class="pull-right">
+            <div class="btn btn-default">
+              <i class="glyphicon glyphicon-refresh"></i>
+              刷新
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <ul class="nav nav-tabs" style="margin-bottom: 20px;">
+          <li class="active"><a href="/example/panels/index.html">Bootstrap Panels</a></li>
+          <li><a href="/example/panels/extends-panels.html">Console Template Panels</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel Title</h3>
+          </div>
+          <div class="panel-body">
+            <p>这是panel的主体
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis. Nullam interdum massa vel nisl fringilla sed viverra erat tincidunt. Phasellus in ipsum velit. Maecenas id erat vel sem convallis blandit. Nunc aliquam enim ut arcu aliquet adipiscing. Fusce dignissim volutpat justo non consectetur.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel Title</h3>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-12">
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label class="col-md-2 control-label">邮箱：</label>
+                    <div class="col-md-10">
+                      <input type="email" class="form-control" placeholder="建议使用Foxmail邮箱"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-2 control-label">密码：</label>
+                    <div class="col-md-10">
+                      <input type="password" class="form-control" placeholder="密码长度不小于8位"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-md-offset-2 col-md-6">
+                      <input type="checkbox"/>
+                      记住登录
+                    </div>
+                    <div class="col-md-4">
+                      <button class="btn btn-success pull-right">登录</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">Panel title</h3>
+          </div>
+          <div class="panel-body">
+            Panel content
+          </div>
+        </div>
+    </div>
+  </div>
+  {{/replace}}
+
+  {{#prepend "footer"}}
+  {{/prepend}}
+{{/extend}}
