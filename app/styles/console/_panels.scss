@@ -150,3 +150,20 @@ $panel-dark-heading-bg: #404040;
     border-top: 1px solid #cccccc;
   }
 }
+
+
+.panel-transparent{
+  border: none;
+
+  & > .panel-heading{
+    background: transparent;
+    border-bottom: 1px solid #DCE8F1;
+    padding-left: 0;
+    padding-right: 5px;
+  }
+
+  & > .panel-body{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
