@@ -60,7 +60,7 @@ module.exports = function (grunt) {
       },
       example: {
         files: ['<%=config.example %>/**/*.htm','<%=config.example %>/**/*.html'],
-        tasks: ['handlebarslayouts:example']
+        tasks: ['handlebarslayouts:serve']
       }
     },
 
@@ -361,6 +361,23 @@ module.exports = function (grunt) {
           cwd: '.',
           src: 'bower_components/bootstrap-sass/assets/fonts/bootstrap/*',
           dest: '<%= config.dist %>'
+        }, {
+          expand: true,
+          dot: true,
+          cwd: '.',
+          src: 'bower_components/font-awesome/fonts/*',
+          dest: '<%= config.dist %>'
+        }, {
+          expand: true,
+          dot: true,
+          cwd: '<%= config.example %>',
+          dest: '<%= config.dist %>/<%= config.example %>',
+          src: [
+            '{,*/}*.{ico,png,txt,js,css}'
+            //'images/{,*/}*.webp',
+            //'{,*/}*.html',
+            //'styles/fonts/{,*/}*.*'
+          ]
         }]
       }
     },
@@ -408,10 +425,23 @@ module.exports = function (grunt) {
     //  }
     //}
     handlebarslayouts: {
-      example: {
+      serve: {
         files: {
           //'.tmp/<%=config.example %>/index.html': '<%=config.example %>/index.html',
           '.tmp/<%=config.example %>/*.html': '<%=config.example %>/**/*.html'
+        },
+        options: {
+          partials: ['<%=config.example %>/public/partials/*.html', '<%=config.example %>/public/layout.html'],
+          basePath: '<%=config.example %>/',
+          modules: ['<%=config.example %>/public/helpers/helpers-*.js'],
+          templatesPath: '<%=config.example %>',
+          context: {}
+        }
+      },
+      dist: {
+        files: {
+          //'.tmp/<%=config.example %>/index.html': '<%=config.example %>/index.html',
+          'dist/<%=config.example %>/*.html': '<%=config.example %>/**/*.html'
         },
         options: {
           partials: ['<%=config.example %>/public/partials/*.html', '<%=config.example %>/public/layout.html'],
@@ -434,7 +464,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'wiredep',
-      'handlebarslayouts:example',
+      'handlebarslayouts:serve',
       'concurrent:server',
       'postcss',
       'browserSync:livereload',
@@ -473,9 +503,10 @@ module.exports = function (grunt) {
     'uglify',
     'copy:dist',
     'modernizr',
-    'filerev',
+    //'filerev',
     'usemin',
-    'htmlmin'
+    //'htmlmin'
+    'handlebarslayouts',
   ]);
 
   grunt.registerTask('default', [

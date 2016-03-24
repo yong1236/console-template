@@ -1,0 +1,38 @@
+$font-size-input-icon: 14px;
+
+//form error states
+$success-state-border:lighten(#92BF65 , 4%);
+$success-state-color:#8BAD4C;
+$success-state-focus-border: darken(#81A85A , 4%);
+$success-state-focus-color:darken($success-state-color, 10%);
+$success-state-focus-shadow: "0px 0px 0px 2px rgba(130, 188, 58, 0.3)";
+$success-state-text-color:#7BA065;//the color of the help text, etc inside that control label
+$success-state-background-color: lighten($success-state-border , 34.5%);
+
+$error-state-border:lighten(#F09784 , 4%);
+$error-state-color:#D68273;
+$error-state-focus-border: darken(#DB8978 , 4%);
+$error-state-focus-color:darken($error-state-color, 10%);
+$error-state-focus-shadow: "0px 0px 0px 2px rgba(219, 137, 120, 0.3)";
+$error-state-text-color:#D16E6C;
+$error-state-background-color: lighten($error-state-border , 21.5%);
+
+$warning-state-border:lighten(#E0C43A , 4%);
+$warning-state-color: #D3BD50;
+$warning-state-focus-border: darken(#D8BC41 , 4%);
+$warning-state-focus-color: darken($warning-state-color, 10%);
+$warning-state-focus-shadow: "0px 0px 0px 2px rgba(216, 188, 65, 0.3)";
+$warning-state-text-color:#D19D59;
+$warning-state-background-color: lighten($warning-state-border , 38%);
+
+$info-state-border:lighten(#64A6BC , 4%);
+$info-state-color:#4B89AA;
+$info-state-focus-border: darken(#64A6BC , 10%);
+$info-state-focus-color: darken($info-state-color, 10%);
+$info-state-focus-shadow: "0px 0px 0px 2px rgba(58, 120, 188, 0.3)";
+$info-state-text-color:#657BA0;
+$info-state-background-color: lighten($info-state-border , 35.5%);
+
+$disabled-state-color:#848484;
+$disabled-state-bg:#EEE;
+

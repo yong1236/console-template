@@ -2,3 +2,7 @@
  * The mixins file connect
  */
 @import "mixins/alert";
+
+@mixin border-radius($size){
+  border-radius: $size;
+}

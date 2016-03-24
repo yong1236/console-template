@@ -6,7 +6,8 @@ $topbar-height: 50px;
     width: 100%;
     height: $topbar-height;
     background: #09C;
-    z-index: 101
+    //z-index: 101
+    z-index: 100
   }
 
   &-body {

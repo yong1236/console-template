@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="login-page">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Login Page / Console Template Example</title>
+  <meta name="description" content="This is Console Template Example">
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/console.css -->
+  <link rel="stylesheet" href="/styles/console.css">
+  <!-- endbuild -->
+  <!-- build:css(.tmp) example/public/styles/main.css -->
+  <link rel="stylesheet" href="/example/public/styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body class="login-page">
+<div class="login-page">
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+  <div class="login-box panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title text-center">登录系统</div>
+    </div>
+    <div class="panel-body">
+      <div class="error">
+
+      </div>
+      <div class="">
+        <div class="col-md-12">
+          <form class="form-horizontal" role="form" action="/example/index.html">
+            <div class="form-group">
+              <label class="control-label text-right sr-only">邮箱：</label>
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                <input type="email" class="form-control" placeholder="建议使用Foxmail邮箱"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label text-right sr-only">密码：</label>
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="password" class="form-control" placeholder="密码长度不小于8位"/>
+              </div>
+            </div>
+            <div class="form-group input-group-lg">
+              <div class="col-md-offset-0">
+                <label><input type="checkbox"/>
+                记住登录</label>
+              </div>
+            </div>
+            <div class="form-group ">
+              <div class="">
+                <button type="submit" class="btn btn-primary btn-block btn-lg">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-fixed-bottom">
+  {{> footer}}
+  </div>
+</div>
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="/bower_components/modernizr/modernizr.js"></script>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/jquery-validation/dist/jquery.validate.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js(.) scripts/plugins.js -->
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
+<script src="/scripts/main.js"></script>
+<!-- endbuild -->
+
+<!-- build:js example/public/scripts/main.js -->
+<script src="/example/public/scripts/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>
